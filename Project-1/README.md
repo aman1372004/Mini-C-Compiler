@@ -35,9 +35,9 @@ Each test file contains a comment header describing its purpose.
 
 ---
 
-Let me know if you want to:
-- Add compilation instructions (`lex`, `gcc`, etc.)
-- Show example input/output
-- Extend for Project 2 `parser.y`
+```bash
+$ flex lexer.l
+$ gcc lex.yy.c -o lexer lfl
+$ ./lexer
 
 
