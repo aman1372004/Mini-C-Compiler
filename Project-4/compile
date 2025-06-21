@@ -1,0 +1,11 @@
+#!/bin/bash
+lex lexer.l
+yacc -d parser.y -v
+g++ -std=c++11 -g y.tab.c  -ll -o icg
+./icg test.c
+#!/for optimizer
+gcc -o optimizer optimizer.c
+ ./optimizer ICG.code
+#!/for code generator
+ gcc -o codegen codegen.c
+ ./codegen optimized.icg

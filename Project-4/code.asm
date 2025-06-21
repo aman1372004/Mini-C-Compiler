@@ -1,0 +1,40 @@
+L0:
+INC main:
+L1:
+MOV c, 0
+L2:
+PUSH c
+PUSH 1
+ADD
+POP t0
+L3:
+MOV c, t0
+L4:
+PUSH c
+PUSH 5
+MUL
+POP t1
+L5:
+MOV d, t1
+L6:
+PUSH d
+PUSH 4
+DIV
+POP t2
+L7:
+MOV e, t2
+L8:
+PUSH d
+PUSH 3
+POP t3
+L9:
+MOV f, t3
+L10:
+PUSH f
+PUSH 0
+DIV
+POP t4
+L11:
+MOV f, t4
+L12:
+INC exit
