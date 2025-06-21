@@ -40,4 +40,4 @@ Let me know if you want to:
 - Show example input/output
 - Extend for Project 2 `parser.y`
 
-I'm here for all compiler vibes bro 🧠🔥
+
