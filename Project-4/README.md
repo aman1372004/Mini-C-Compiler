@@ -1,24 +1,30 @@
-# Compiler Design Project-4
+# Compiler Design Lab - Project 4
 
-## Intermediate Code Generation for a subset of the C language
-This code is built upon the semantic analyser designed in Project-3 with some modifications to the earlier structure.
+## Intermediate Code Generation, Optimization, and Target Code Generation for a Subset of the C Language
 
-### Team Members
- - Karthik M (15CO221)
- - Kaushik S Kalmady (15CO222)
+This is the final phase of our Mini C Compiler project. It builds upon the Semantic Analyzer from Project-3 and implements the following key compiler stages:
 
-### Installation and running
- 1. Please make sure you have Lex/Flex and Yacc/Bison installed
- 2. Next run `$ chmod +x compile` 
- 3. `$ ./compile`
- 4. To run the parser `$./icg test-file.c`
+- 🛠️ Intermediate Code Generation (ICG)
+- ♻️ Code Optimization
+- 🖥️ Target Code Generation (Assembly-style output)
+
+---
+
+### 🧑‍💻 Team Members
+
+1. Aman Singh  
+2. Anurag Pundir  
+3. Ayush Rana  
+4. Abhishek Bhatt  
 
 
-### FEATURES
- - Backward compatibility with Semantic Analyser from Project-3
- - Code generation for arithmetic expressions
- - Backpatching for `if-else` statements and `nested if-else`
- - Backpatching for `while` and `for` loops
- - Array indexing
- - Backpatching for logical amd relational expressions
- - Jumps for `break` and `continue`
+
+---
+
+### ⚙️ Installation & Running Instructions
+
+1. Ensure you have **Lex/Flex** and **Yacc/Bison** installed
+2. Make the compile script executable:
+
+   ```bash
+   chmod +x compile
