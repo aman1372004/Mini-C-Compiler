@@ -27,4 +27,12 @@ This is the final phase of our Mini C Compiler project. It builds upon the Seman
 2. Make the compile script executable:
 
    ```bash
-   chmod +x compile
+   lex lexer.l
+   yacc -d parser.y -v
+   g++ -std=c++11 -g y.tab.c -ll -o icg
+
+   gcc -o optimizer optimizer.c
+   ./optimizer ICG.code
+
+   gcc -o codegen codegen.c
+   ./codegen optimized.icg
