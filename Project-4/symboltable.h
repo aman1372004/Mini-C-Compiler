@@ -1,11 +1,3 @@
-/*
-* Compiler Design Project 4: Intermediate Code Generation
-*
-* File        : symboltable.h
-*
-* Authors     : Karthik M - 15CO22, Kaushik S Kalmady - 15CO222
-* Date        : 4-4-2018
-*/
 
 
 #include <stdint.h>
