@@ -1,6 +1,6 @@
 # Mini C Compiler
 
-This is a mini-compiler for a subset of the C language, built as part of our Compiler Design Lab Course (CO351).
+This is a mini-compiler for a subset of the C language, built as part of our Compiler Design Lab Course TCS-601).
 
 The project was developed in four incremental phases, each representing an important component of a compiler:
 
