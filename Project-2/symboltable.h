@@ -1,14 +1,3 @@
-/*
-* Compiler Design Project 1 : Lexical Analyser
-*
-* File        : symboltable.h
-* Description : This file contains functions related to a hash organised symbol table.
-*               The functions implemented are:
-*               create_table(), insert(), search, display()
-*
-* Authors     : Karthik M - 15CO22, Kaushik S Kalmady - 15CO222
-* Date        : 17-1-2018
-*/
 
 
 
