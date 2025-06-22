@@ -25,6 +25,6 @@ Semantic analysis ensures that the program follows the rules of the language lik
 2. Run the following commands:
 
 ```bash
-$ chmod +x compile
-$ ./compile
-$ ./semantic_analyser test-file.c
+$ lex lexer.l
+$ yacc -d parser.y -v
+$ gcc -w -g y.tab.c -ll -o semantic_analyser
