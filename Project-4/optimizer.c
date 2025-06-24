@@ -31,6 +31,7 @@ int try_constant_folding(const char *line, char *out) {
         if (strcmp(op, "+") == 0) res = a + b;
         else if (strcmp(op, "-") == 0) res = a - b;
         else if (strcmp(op, "*") == 0) res = a * b;
+        else if (strcmp(op, "%") == 0) res = a % b;
         else if (strcmp(op, "/") == 0 && b != 0) res = a / b;
         else return 0;
         sprintf(out, "%s = %d", lhs, res);
@@ -58,17 +59,34 @@ int main(int argc, char *argv[]) {
 
     char line[MAX_LINE], folded[MAX_LINE];
     while (fgets(line, sizeof(line), fin)) {
-        // Remove newline
         size_t len = strlen(line);
-        if (len && line[len-1] == '\n') line[len-1] = 0;
-        if (try_constant_folding(line, folded)) {
-            fprintf(fout, "%s\n", folded);
+        if (len && line[len - 1] == '\n') line[len - 1] = 0;
+
+        char *colon = strchr(line, ':');
+        char *code_line;
+        char line_num[16] = "";
+
+        if (colon) {
+            int len = colon - line;
+            strncpy(line_num, line, len);
+            line_num[len] = '\0';
+            code_line = colon + 1;
         } else {
-            // Write all lines as-is if not foldable
+            code_line = line;
+        }
+
+        while (*code_line == ' ') code_line++;
+
+        if (try_constant_folding(code_line, folded)) {
+            if (strlen(line_num) > 0)
+                fprintf(fout, "%s: %s\n", line_num, folded);
+            else
+                fprintf(fout, "%s\n", folded);
+        } else {
             fprintf(fout, "%s\n", line);
         }
-    }
 
+    }
     fclose(fin);
     fclose(fout);
     printf("Optimization complete. Output: optimized.icg\n");
