@@ -27,4 +27,5 @@ Semantic analysis ensures that the program follows the rules of the language lik
 ```bash
 $ lex lexer.l
 $ yacc -d parser.y -v
-$ gcc -w -g y.tab.c -ll -o semantic_analyser
+$ gcc -w -g y.tab.c -ll -o semantic_analyzer
+$ ./semantic_analyzer testcases/test-case-1.c
